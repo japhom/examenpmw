@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import {
-    BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
+    BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
 } from 'recharts';
 
 export default class SimpleBarChart extends PureComponent {
@@ -28,15 +28,19 @@ render() {
                         <stop offset="5%" stopColor="rgba(164,179,87,1)" stopOpacity={0.8} />
                         <stop offset="95%" stopColor="rgba(117,137,12,1)" stopOpacity={1} />
                     </linearGradient>
+                    <linearGradient id="colorPy" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="5%" stopColor="rgba(64,179,87,1)" stopOpacity={0.8} />
+                        <stop offset="95%" stopColor="rgba(17,137,12,1)" stopOpacity={1} />
+                    </linearGradient>
                 </defs>
                 <XAxis dataKey={label} />
                 <YAxis yAxisId="left"/>
-                <YAxis yAxisId="right" orientation="right" />
+                {/* <YAxis yAxisId="right" orientation="left" /> */}
                 <Tooltip />
                 <Legend />
                 <Bar yAxisId="left" dataKey={llaves[0]} fill={'url(#colorUv)'} />
-                <Bar yAxisId="right" dataKey={llaves[1]} fill={'url(#colorPv)'} />
-                <Bar yAxisId="right" dataKey={llaves[2]} fill={'url(#colorPv)'} />
+                <Bar yAxisId="left" dataKey={llaves[1]} fill={'url(#colorPv)'} />
+                <Bar yAxisId="left" dataKey={llaves[2]} fill={'url(#colorPy)'} />
             </BarChart>
         );
     }
