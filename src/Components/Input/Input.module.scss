@@ -1,0 +1,31 @@
+* {
+	box-sizing: border-box;
+}
+
+
+.default {
+	border: 1px solid lightgray;
+	font-size: .9rem;
+	font-weight: 500;
+	line-height: normal;
+	max-width: 250px;
+	
+	padding: 5px 5px;
+	margin: 1px 0 0 0;
+	border-radius: 4px;
+	line-height: 24px;
+	outline: none;
+	color: darkslategray;
+	background: white;
+	text-align: center;
+}
+.main {
+	display: flex;
+}
+.main > span {
+	flex:1;
+	margin-right: 5px;
+}
+.main > input{
+	flex:3;
+}
